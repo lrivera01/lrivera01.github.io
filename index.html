@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Derechos de Explotación</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<script src="https://use.fontawesome.com/2204870285.js"></script>
+
+</head>
+<body>
+	
+	<div class="container">
+		<!-- Dropdown Inicio de seccion -->
+			<ul id="dropdown-unlogin" class="nav navbar-nav navbar-right">
+	          <li class="dropdown">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+	  			<ul id="unlogin-pg" class="dropdown-menu">
+	  				<div id="alert-ulogin" class="alert alert-danger alert-dismissible text-center hidden" role="alert">
+	  				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-frown-o" aria-hidden="true"></i> Nombre de usuario o contraseña incorrecta.</div>
+	  				<form >
+		  				<li class="panel">
+		  					<div class="row">
+		  						<div class="col-xs-12">
+				  					<div class="panel-body">
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+												<input type="text" id="txt-user" class="form-control" placeholder="User">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+												<input type="password" id="txt-password" class="form-control" placeholder="Password">
+											</div>
+											<a href="" class="text-right"><p>He olvidado la contraseña?</p></a>
+										</div>
+				  					</div>
+		  						</div>
+		  					</div>
+		  					<div class="panel-footer">
+		  						<button type="button" id="btn-login" class="btn btn-info form-control input-sm"><i class="fa fa-sign-in" aria-hidden="true"></i> Sing in</button>
+		  					</div>
+		  				</li>
+	  				</form>
+	  			</ul>
+	          </li>
+			</ul>
+			<!-- Modal inicio de sección exitoso -->
+				<div class="modal fade" id="Modal_login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog modal-sm" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header pinta">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">¡ Inicio de sección exitoso !.</h4>
+				      </div>
+				      <div class="modal-body pinta">
+				        	<div class="alert alert-success alert-dismissible" role="alert">
+				        	  <p class="text-center"><i class="fa fa-info" aria-hidden="true"></i> Bienvenido <strong>Ludwing Rivera Amador</strong>,</p>
+				        	  <p class="text-center"> Has iniciado sección con el usuario <strong>lrivera</strong>.</p>
+				        	</div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			<!-- Modal inicio de sección exitoso -->
+		<!-- End Dropdown Inicio de seccion -->
+
+		<!-- Dropdown usuario logueado -->
+
+					<ul id="dropdown-login" class="nav navbar-nav navbar-right hidden" aria-labelledby="dropdownMenuDivider">
+			          <li class="dropdown">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b id="n-user"></b> <span class="caret"></span></a>
+			  			<ul id="login-pg" class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+		  					<li><a href="#">Perfil</a></li>
+		  					<li><a href="#">Ayuda</a></li>
+		  					<li role="separator" class="divider"></li>
+		  					<li><a href="" id="btn-unlogin"><i class="fa fa-power-off" aria-hidden="true"></i> Cerrar seccion</a></li>
+			  			</ul>
+			          </li>
+					</ul>
+		<!-- End Dropdwun usuario logueado -->
+
+		<div class="imagenes row">
+			
+			<!--<img src="img/coljuegos.png" alt="Coljuegos" class="col-xs-4 col-sm-4 col-md-4 col-lg-3 col-lg-offset-1 img-coljuegos">-->
+			<img src="img/minH.png" alt="Minhacienda" class="ol-xs-12 col-sm-12 col-md-12 col-lg-12 img-mh">
+
+		</div>
+
+		<div class="jumbotron">
+			<!-- Menu -->
+
+			<nav class="navbar navbar-default role="navigation"">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" id="btn-fde" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="http://cnjsa.coljuegos.gov.co/"><img src="img/cnjsa2.png" alt="Consejo nacional de juegos de suerte y azar cnjsa" class="img-cnjsa"></a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			      	<li><a href=""><i class="fa fa-home fa-1x" aria-hidden="true"></i></a></li>
+			        <!-- Dropdown Cargues -->
+			        <li class="dropdown hidden">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cargues <span class="caret"></span></a>
+			          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			            <li><a href="#" id="btn-de" type="button">Formulario de DE</a></li>
+			            <li><a href="#" id="btn-pago" type="button">comprobantes de pagos</a></li>
+			            <li><a href="#" id="btn-pc">Premios caducos</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#" id="btn-contrato" type="button">Contratos</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#" id="btn-contactos" type="button">Contactos</a></li>
+			          </ul>
+			        </li>
+			        <!-- End Dropdown Cargues -->
+			        <!-- Dropdown Informes -->
+			        <li class="dropdown hidden">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informes <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#myModal">Formulario de DE</a></li>
+			            <li><a href="#">comprobantes de pagos</a></li>
+			            <li><a href="#">Premios caducos</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Contratos</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Contactos</a></li>
+			          </ul>
+			        </li>
+			        <!-- End Dropdown Informes -->
+			        <!-- Dropdown Consultas -->
+			        <li class="dropdown hidden">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultas <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#myModal">Formulario de DE</a></li>
+			            <li><a href="#">comprobantes de pagos</a></li>
+			            <li><a href="#">Premios caducos</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#" >Contratos</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Contactos</a></li>
+			          </ul>
+			        </li>
+			        <!-- End Dropdown Consultas -->
+			        <!-- Dropdown Biblioteca Normativa -->
+			        <li class="dropdown hidden">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Biblioteca Normativa <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Cargue</a></li>
+			            <li><a href="#" data-toggle="modal" data-target="#Modal_consultaBN">Consulta</a></li>
+			          </ul>
+			        </li>
+			        <!-- End Dropdown  Normativa -->
+			      </ul>
+			      <form class="navbar-form navbar-right">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="Search">
+			        </div>
+			        <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+			      </form>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		
+	
+			<!-- End Menu -->
+				
+			<!-- formulario de DE -->
+				<div id="div-de" class="hidden">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="pg/captura_fde.html"></iframe>
+					</div>
+					<br>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-group text-right">
+								<button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="Cargue de información declarada en formulario de derechos de explotación"> Envio</button>
+								<button id="btn-canc-cde" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Cancelar envio, vuelve a menu"> Cancelar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- End formulario de DE -->
+			<!-- Comprobantes de Pagos-->
+
+				<div id="div-pago" class="hidden">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="pg/captura_pagos_de.html"></iframe>
+					</div>
+					<br>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-group text-right">
+								<button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="Cargue de comprobantes de pago"> Envio</button>
+								<button id="btn-canc-cpago" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Cancelar envio, vuelve a menu"> Cancelar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- End Comprobantes de Pagos-->
+			
+			<!-- Contrato-->
+				<div id="div-contrato" class="embed-responsive embed-responsive-16by9 hidden">
+					<iframe class="embed-responsive-item text-center" src="pg/captura_contrato.html"></iframe>
+				</div>
+			<!-- End Contrato-->
+			
+			<!-- Premios caducos-->
+				<div id="div-premio_caduco" class="embed-responsive embed-responsive-16by9 hidden">
+					<iframe class="embed-responsive-item text-center" src="pg/captura_pagos_pc.html"></iframe>
+				</div>
+			<!-- End Premios caducos-->
+			
+			<!-- Contactos-->
+				<div id="div-contactos" class="embed-responsive embed-responsive-16by9 hidden">
+					<iframe class="embed-responsive-item text-center" src="pg/captura_contatos.html"></iframe>
+				</div>
+			<!-- End contactos-->
+
+
+
+			<!-- Modal Consulta BN -->
+				<!-- Modal -->
+				<div class="modal fade" id="Modal_consultaBN" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog modal-lg" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Consultas - Biblioteca normativa</h4>
+				      </div>
+				      <div class="modal-body">
+				        	<div class="embed-responsive embed-responsive-16by9">
+				        	  <iframe class="embed-responsive-item" src="pg/consulta_BN.html"></iframe>
+				        	</div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			<!-- End Modal Consulta BN -->
+			
+		</div>
+		<label for="" id="fecha-hora" class="text-right"></label>
+			
+	</div>
+
+	
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+	<script>
+		/*$('#div-pago').removeClass('show').addClass('hidden');
+		/*var url = "pg/consulta_BN.html"; 
+		$(location).attr('href',url);*/
+	</script>
+
+
+
+</body>
+</html>
