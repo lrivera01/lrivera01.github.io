@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de información - Apuestas permanentes</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<script src="https://use.fontawesome.com/2204870285.js"></script>
+
+</head>
+<body>
+	
+	
+	<form action="">
+		<div class="form-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="text-center">Cargue de comprobantes de pago por concepto de derechos de explotación</h3>
+				</div>
+				<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="panel-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<label for="#OptionDepto">Departamento en el que opera</label>
+									<select id="OptionDepto" class="form-control input-sm"></select>
+								</div>
+								<div class="panel-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<label for="#OptionConcesionario">Razón Social del Concesionario</label>
+									<select id="OptionConcesionario" class="form-control input-sm"></select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="panel-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<label for="#nit">Nit concesionario</label>
+									<input class="form-control input-sm" type="text" id="nit" placeholder="Nit">
+								</div>
+								<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<label for="mes">Periodo</label>
+									<input class="form-control input-sm" type="month" autocomplete="on" min="2010-12" max="2017-12" name="mes">
+								</div>
+							</div>
+						</div>
+						<div class="panel-body">
+							
+							<div class="form-group">
+								<table class="table table-responsive">
+									<thead>
+										<tr class="row">
+											<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">Tipo de documento</th>
+											<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">Banco</th>
+											<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">Numero</th>
+											<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">Concepto</th>
+											<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">Valor</th>
+											<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">Recibo de caja</th>
+										</tr>
+									</thead>
+									<tbody id="componentes-cuerpo">
+										<tr class="row" id="fila-componentes">
+											<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+												<select id="OptionTipoc" class="form-control input-sm"></select>
+											</td>
+											<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+												<select id="OptionBanco" class="form-control input-sm"></select>
+											</td>
+											<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+												<input type="text" id="numero" class="form-control input-sm" placeholder="Numero de comprobante">
+											</td>
+											<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+												<select id="OptionConcepto" class="form-control input-sm"></select>
+											</td>
+											<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+												<input type="text" id="valor" class="form-control input-sm text-right" placeholder="$0" data-thousands="." data-decimal="," data-prefix="$ ">
+											</td>
+											<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-1">
+												<input type="text" id="numeroRC" class="form-control input-sm" placeholder="Numero de Recibo de caja">
+											</td>
+											<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-1">
+												<button type="button" class="btn btn-danger btn-sm" id="btn-add">Add</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
+	<script type="text/javascript" src="../js/jquery.maskMoney.min.js"></script>
+
+	<script type="text/javascript">
+		//http://plentz.github.io/jquery-maskmoney/
+		$(function(){
+			$('#valor').maskMoney();
+		});
+
+		//Clonar componentes
+		$('document').ready(function(){
+			$('#btn-add').click(function(){
+				$('#fila-componentes').clone(true,true).appendTo('#componentes-cuerpo');
+			});
+		});
+	</script>
+</body>
+</html>

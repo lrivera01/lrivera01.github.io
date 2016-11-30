@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de información - Apuestas permanentes</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../css/style_contactos.css">
+	<script src="https://use.fontawesome.com/2204870285.js"></script>
+
+</head>
+<body>
+	
+
+	<div class="jumbotron">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<label for="">Nuevo contacto</label>
+			</div>
+			<div class="panel-body">
+				<form action="">
+					<div class="panel panel-default">
+						<div class="form-group">
+							<div class="panel-body">
+								<label for="">Grupo clasificación</label>
+								<select name="" id="option-grupo" class="form-control input-sm"></select>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-group">
+							<div class="panel-body row">
+								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<label for="#OptionConcesionario">Organización</label>
+									<select id="OptionConcesionario" class="form-control input-sm"></select>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+									<label for="">Nit</label>
+									<input type="text" class="form-control input-sm">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-group">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										<label for="">Tratamiento</label>
+										<select id="OptionTratamiento" class="form-control input-sm">
+											<option value="">Doctor</option>
+											<option value="">Doctora</option>
+										</select>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										<label for="">Cargo</label>
+										<select id="OptionCargo" class="form-control input-sm"></select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12">
+										<label for="">Primer nombre</label>
+										<input type="text" name="fullname" class="form-control" placeholder="Primer nombre">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-group">
+							<div class="panel-body">
+								<div class="row">
+									<div class="panel-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<label for="#OptionDepto">Departamento</label>
+										<select id="OptionDepto" class="form-control input-sm"></select>
+									</div>
+									<div class="panel-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<label for="#OptionMunicipio">Municipio</label>
+										<select id="OptionMunicipio" class="form-control input-sm"></select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+										<button class="form-control input-sm btn btn-default" type="button" id="modal_dire"> <i class="fa fa-map-marker" aria-hidden="true"></i> </button>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-11 col-lg-11">										
+										<input type="text" name="address" id="direccion_principal" class="form-control input-sm" id="disabledInput" placeholder="Agredar dirección" disabled>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="panel-footer">
+				<button class="btn btn-success" id="btn_save_contactos"><i class="fa fa-plus" aria-hidden="true"></i> Cargar</button>
+			</div>
+		</div>
+
+		<!-- Modal direciones -->
+			<!-- Modal -->
+			<div class="modal fade" id="myModalAddress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog modal-lg" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">ASISTENTE DE DIRECCIÓN</h4>
+			      </div>
+			      <div class="modal-body">
+			      		<div class="panel panel-default">
+			      			<div class="panel-body">
+			      				<form action="">
+			      					<p>Dirección completa</p>
+			      					<div class="form-group">
+			      							<div class="input-group">
+			      						      <input type="text" class="form-control input-sm" id="direccion" disabled>
+			      						      <span class="input-group-btn">
+			      						        <button class="btn btn-default input-sm" type="button" data-toggle="tooltip" data-placement="bottom" title="Borrar"><span aria-hidden="true" id="btn-direccion">&times;</span></button>
+			      						      </span>
+			      						    </div>
+			      						    <br>
+			      						    <label for="">Conformación general</label>
+			      						    <p class="text-justify">A continuación se deben presentar los componentes de la dirección en el orden que se presenta. Si no aplica, puede dejarlo en blanco. En cualquier momento puede revisar en la parte superior como está quedando la dirección que está ingresando.</p>
+			      					</div>
+			      					<div id="alert-requerid" class="alert alert-danger text-center hidden" role="alert"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ¡Campo requerido, Por favor diligencielo!.</div>
+			      					<div class="panel panel-default">
+			      						<div class="panel-body">
+			      							<div class="form-group">
+			      								<div class="row">
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" >Seleccione el tipo de vía</label>
+			      										<select name="tipo_via" id="tipovia" class="form-control input-sm"></select>
+			      									</div>
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<input type="text" id="n1" class="form-control input-sm ">
+			      									</div>
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<select name="letra1" id="letra1" class="form-control input-sm"></select>
+			      									</div>
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible" class="label-invisible">--</label>
+			      										<select name="" id="bis" class="form-control input-sm">
+			      											<option value=""></option>
+			      											<option value="">BIS</option>
+			      										</select>
+			      									</div>
+			      								</div>
+			      							</div>
+			      							<div class="form-group">
+			      								<div class="row">
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<select name="letra2" id="letra2" class="form-control input-sm"></select>
+			      									</div>
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<select name="" id="orientacion1" class="form-control input-sm"></select>
+			      									</div>
+			      									<div class="col-xs-16 col-sm-6 col-md-3 col-lg-3">
+			      										<label for="" >Número(#)</label>
+			      										<input type="text" id="numero2" class="form-control input-sm">
+			      									</div>
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<select name="" id="letra3" class="form-control input-sm"></select>
+			      									</div>
+			      								</div>
+			      							</div>
+			      							<div class="form-group">
+			      								<div class="row">
+			      									
+			      									<div class="col-xs-6 col-sm-6 col-md-1 col-lg-1">
+			      										<label for="" class="label-invisible">--</label>
+			      										<input type="text" id="numero3" value=" - " class="form-control input-sm" disabled>
+			      									</div>
+			      									<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+			      										<label for="" class="label-invisible">--</label>
+			      										<input type="text" id="numero4" class="form-control input-sm">
+			      									</div>
+			      									<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<select name="" id="orientacion2" class="form-control input-sm"></select>
+			      									</div>
+			      									<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			      										<label for="" >Tipo complemento</label>
+			      										<select name="" id="tipo_complemento" class="form-control input-sm"></select>
+			      									</div>
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<input type="text" id="numero5" class="form-control input-sm">
+			      									</div>
+			      								</div>
+			      							</div>
+			      							<div class="form-group">
+			      								<div class="row">
+			      									<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			      										<label for="" class="label-invisible">--</label>
+			      										<button type="button" class="btn btn-default form-control" id="btn-add" data-toggle="tooltip" data-placement="right" title="Agregar campos"><i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar</button>
+			      									</div>
+			      								</div>
+			      							</div>
+			      						</div>
+			      					</div>
+			      				</form>
+			      			</div>
+			      			<div class="panel-footer">
+			      				<div class="row center-text">
+			      					<div class="col-xs-6 col-sm-6 col-md-offset-3 col-md-3 col-lg-offset-3 col-lg-3">
+			      						<button type="button" class="btn btn-danger form-control input-sm" data-toggle="tooltip" data-placement="left" title="Cancelar" data-dismiss="modal"><i class="fa fa-ban" aria-hidden="true"></i></button>
+			      					</div>
+			      					<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			      						<button type="button" id="envio" class="btn btn-info form-control input-sm" data-toggle="tooltip" data-placement="right" title="Aceptar"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+			      					</div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      </div>
+			      <div class="modal-footer">
+			      	
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		<!-- End Modal direciones -->
+
+	</div>
+
+	
+	
+	
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
+	<script type="text/javascript" src="../js/script_contactos.js"></script>
+
+	<script type="text/javascript">
+
+	</script>
+
+
+</body>
+</html>

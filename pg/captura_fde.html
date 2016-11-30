@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de información - Apuestas permanentes</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<script src="https://use.fontawesome.com/2204870285.js"></script>
+
+</head>
+<body>
+	
+	<!-- formulario -->
+		<div class="row">
+			<div class="col-xs-12">
+				<form action="#">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="text-center">DECLARACIÓN DE LOS DERECHOS DE EXPLOTACIÓN DEL JUEGO DE EPUESTAS PERMANENTES</h3>
+						</div>
+						<div class="panel-body">
+							<!-- Sección A y B-->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<label for="">SECCIÓN A. TIPO DE DECLARACIÓN / SECCIÓN B PERIODO DE DECLARACIÓN</label>
+								</div>
+								<div class="panel-body row">
+									<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<label for="#optionTipo">Tipo de declaración</label>
+										<select class="form-control input-sm" id="optionTipo">
+										  <option>A.1. Inicial</option>
+										  <option>A.2. Corrección</option>
+										</select>
+									</div>
+									<div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<label for="mes">Periodo</label>
+										<input class="form-control input-sm" type="month" autocomplete="on" min="2010-12" max="2017-12" name="mes">
+									</div>
+								</div>
+							</div>	
+							<!-- End Sección A y B-->
+
+							<!-- Sección C-->
+								<div class="panel panel-default seccionC">
+									<div class="panel-heading">
+										<label for="">SECCIÓN C. INFORMACIÓN GENERAL</label>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="panel-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+												<label for="#OptionDepto">Departamento en el que opera</label>
+												<select id="OptionDepto" class="form-control input-sm"></select>
+											</div>
+											<div class="panel-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+												<label for="#OptionConcesionario">Razón Social del Concesionario</label>
+												<select id="OptionConcesionario" class="form-control input-sm"></select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="panel-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
+												<label for="#nit">Nit concesionario</label>
+												<input class="form-control input-sm" type="text" id="nit" placeholder="Nit">
+											</div>
+											<div class="panel-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
+												<label for="#contrato">Número de contrato</label>
+												<input type="text" class="form-control input-sm" id="contrato" placeholder="Contrato">
+											</div>
+											<div class="panel-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
+												<label for="#fecha_inicio">Fecha de inicio</label>
+												<input type="date" class="form-control input-sm">
+											</div>
+										</div>
+										<div class="linea"></div>
+										<br>
+										<div class="panel-group col-md-12">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th><i class="fa fa-location-arrow" aria-hidden="true"></i> Dirección</th>
+														<th><i class="fa fa-map-marker" aria-hidden="true"></i> Municipio</th>
+														<th><i class="fa fa-map-marker" aria-hidden="true"></i> Departamento</th>
+														<th><i class="fa fa-phone" aria-hidden="true"></i> Teléfono</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									
+								</div>
+							<!-- End Sección C-->
+							
+							<!-- Sección D-->
+
+							<!-- End Sección D-->
+							
+							<!-- Sección E-->
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<label for="">SECCIÓN E. INGRESOS</label>
+									</div>
+									<div class="panel-body">
+										<table class="table table-responsive">
+											<thead>
+												<tr>
+													<th>R</th>
+													<th class="text-center">CONCEPTO</th>
+													<th class="text-center">E.1. CHANCE TRADICIONAL</th>
+													<th class="text-center">E.2. CHANCE AUTORIZADO</th>
+													<th class="text-center total">E.3. CHANCE TOTAL</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Ingresos brutos por venta de chance </td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Ingresos brutos por venta de chance </td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>Ingresos brutos por venta de chance </td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td class="total">4</td>
+													<td class="total">Ingresos brutos por venta de chance </td>
+													<td><input type="text" class="form-control input-sm text-right total" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right total" placeholder="0"></td>
+													<td><input type="text" class="form-control input-sm text-right total" placeholder="0"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							<!-- End Sección E-->
+							<!-- Sección F-->
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<label for="">SECCIÓN F. LIQUIDACIÓN</label>
+									</div>
+									<div class="panel-body">
+										<table class="table">
+											<tbody>
+												<tr>
+													<td>F.1.</td>
+													<td>Valor de los derechos de explotación (12% del renglon E.4 en la columna chance total)</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.2.</td>
+													<td>Valor de la rentabilidad mínima mensular (Pactada contractualmente) </td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.3.</td>
+													<td>Valor del anticipo liquidado y pagado en el período anterior</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.4.</td>
+													<td>Saldo a pagar por derechos de explotación en el periodo (restar F.3 del mayor entre F.1 y f.2)</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.5.</td>
+													<td>Saldo a pagar por derechos de explotación en el periodo (restar F.3 del mayor entre F.1 y f.2)</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.6.</td>
+													<td>Valor de la compensación autorizada</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.7.</td>
+													<td>Valor del anticipo para el periodo siguiente (75% del mayor entre F.1 y F.2)</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.8.</td>
+													<td>Valor de los intereses moratorios</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.9.</td>
+													<td>Subtotal derechos de explotación e intereses moratorios (F.4 - F.5 - F.6 + F.7 + F.8)</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.10.</td>
+													<td>Valor gastos de administración en el periodo (1% del mayor entre F.1 y F.2)</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+												<tr>
+													<td>F.11.</td>
+													<td>Total a cargo derechos de explotación, intereses y gastos de administración (F.9 + F.10)</td>
+													<td><input type="text" class="form-control input-sm text-right" placeholder="0"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							<!-- End Sección F-->
+
+							<!-- Sección G-->
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<label for="">SECCIÓN G. MOVIMIENTO DE FORMULARIOS</label>
+									</div>
+									<div class="panel-body">
+										<div class="form-group">
+											<table class="table table-responsive">
+												<thead>
+													<tr class="row">
+														<th class="panel-group col-xs-12 col-sm-12 col-md-1 col-lg-1 text-center">R</th>
+														<th class="panel-group col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center">CONCEPTOS</th>
+														<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">G.1. JUEGO MANUAL</th>
+														<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">G.2. JUEGO SISTEMATIZADO</th>
+														<th class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">G.3. JUEGO EN TIEMPO</th>
+													</tr>
+												</thead>
+												<tbody id="componentes-cuerpo">
+													<tr class="row" id="fila-componentes">
+														<td class="panel-group col-xs-12 col-sm-12 col-md-1 col-lg-1">
+															<label class="text-center">1</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+															<label class="text-rigth">Inventario inicial</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+													</tr>
+													<tr class="row" id="fila-componentes">
+														<td class="panel-group col-xs-12 col-sm-12 col-md-1 col-lg-1">
+															<label class="text-center">2</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+															<label class="text-rigth">Recibidos en el periodo</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+													</tr>
+													<tr class="row" id="fila-componentes">
+														<td class="panel-group col-xs-12 col-sm-12 col-md-1 col-lg-1">
+															<label class="text-center">3</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+															<label class="text-rigth">Utilizados en el periodo declarado</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+													</tr>
+													<tr class="row" id="fila-componentes">
+														<td class="panel-group col-xs-12 col-sm-12 col-md-1 col-lg-1">
+															<label class="text-center">4</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+															<label class="text-rigth">Reportados como perdidos</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+													</tr>
+													<tr class="row" id="fila-componentes">
+														<td class="panel-group col-xs-12 col-sm-12 col-md-1 col-lg-1">
+															<label class="text-center">5</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+															<label class="text-rigth">Reportados anulados</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+													</tr>
+													<tr class="row" id="fila-componentes">
+														<td class="panel-group col-xs-12 col-sm-12 col-md-1 col-lg-1">
+															<label class="text-center">6</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+															<label class="text-rigth">Inventario inicial</label>
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+														<td class="panel-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+															<input type="text" class="form-control input-sm" placeholder="$ 0">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							<!-- End Sección G-->
+							<!-- Sección H e I-->
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<label for="">SECCIÓN H. PAGOS</label>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="panel-group col-xs-4 col-sm-4 col-md-2 col-lg-2">
+														<label for="">H.1.</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-6 col-lg-6">
+														<label for="">Valor de los derechos de explotación</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+														<input type="text" class="form-control input-sm" placeholder="$ 0">
+													</div>
+												</div>
+												<div class="row">
+													<div class="panel-group col-xs-4 col-sm-4 col-md-2 col-lg-2">
+														<label for="">H.2.</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-6 col-lg-6">
+														<label for="">Valor de las sanciones</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+														<input type="text" class="form-control input-sm" placeholder="$ 0">
+													</div>
+												</div>
+												<div class="row">
+													<div class="panel-group col-xs-4 col-sm-4 col-md-2 col-lg-2">
+														<label for="">H.3.</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-6 col-lg-6">
+														<label for="">Valor de los intereses moratorios</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+														<input type="text" class="form-control input-sm" placeholder="$ 0">
+													</div>
+												</div>
+												<div class="row">
+													<div class="panel-group col-xs-4 col-sm-4 col-md-2 col-lg-2">
+														<label for="">H.4.</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-6 col-lg-6">
+														<label for="">Valor de los gastos de administración</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+														<input type="text" class="form-control input-sm" placeholder="$ 0">
+													</div>
+												</div>
+												<div class="row">
+													<div class="panel-group col-xs-4 col-sm-4 col-md-2 col-lg-2">
+														<label for="">H.5.</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-6 col-lg-6">
+														<label for="">Valor total a pagar</label>
+													</div>
+													<div class="panel-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+														<input type="text" class="form-control input-sm" placeholder="$ 0">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<label for="">SECCIÓN I. FIRMAS</label>
+											</div>
+											<div class="panel-body">
+												<div class="checkbox">
+												  <div class="panel-group">
+												  	<label>
+												  	  <input id="Fdeclarante" type="checkbox">I.1. Declarante
+												  	</label>
+												  </div>
+												  <div class="panel-group">
+												  	<label>
+												  	  <input id="Fdeclarante" type="checkbox">I.2. Revisor fiscal o contador público
+												  	</label>
+												  </div>
+												  <div class="panel-group">
+												  	<label>
+												  	  <input id="Fdeclarante" type="checkbox">I.1. Declarante
+												  	</label>
+												  </div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							<!-- End Sección H e I-->
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	<!-- End Formulario -->
+	
+
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
+
+
+</body>
+</html>

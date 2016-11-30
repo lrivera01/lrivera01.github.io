@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de información - Apuestas permanentes</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<script src="https://use.fontawesome.com/2204870285.js"></script>
+
+</head>
+<body>
+	
+	<form action="">
+		<div class="form-group">
+			<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="panel-group col-xs-12 col-sm-12 col-md-8 col-lg-8">
+								<label for="#OptionDepto">Departamento en el que opera</label>
+								<select id="OptionDepto" class="form-control input-sm"></select>
+							</div>
+							<div class="panel-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+								<label for="#nit">Nit concesionario</label>
+								<input class="form-control input-sm" type="text" id="nit" placeholder="Nit">
+							</div>
+						</div>
+						<div class="row">
+							<div class="panel-group col-xs-12 col-sm-12">
+								<label for="#OptionConcesionario">Razón Social del Concesionario</label>
+								<select id="OptionConcesionario" class="form-control input-sm"></select>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="panel-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<label for="">Numero de contrato</label>
+								<input type="text" class="form-control input-sm">
+							</div>
+							<div class="panel-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<label for="">Fecha de suscripcion</label>
+								<input type="date" class="form-control input-sm">
+							</div>
+						</div>
+						<div class="row">
+							<div class="panel-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<label for="">Fecha de inicio</label>
+								<input type="date" class="form-control input-sm">
+							</div>
+							<div class="panel-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<label for="">Fecha de finalización</label>
+								<input type="date" class="form-control input-sm">
+							</div>
+						</div>
+						<div class="row">
+							<div class="panel-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<label for="">Valor de los Derechos de Explotación</label>
+								<input type="text" class="form-control input-sm text-right" placeholder="$ 0">
+							</div>
+							<div class="panel-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<label for="">Valor de los Gastos de Administración</label>
+								<input type="text" class="form-control input-sm text-right" placeholder="$ 0">
+							</div>
+						</div>
+						<div class="row">
+							<div class="panel-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+								<label for="">Valor total del Contrato</label>
+								<input type="text" class="form-control input-sm text-right" placeholder="$ 0">
+							</div>
+							<div class="panel-group col-xs-12 col-sm-12 col-md-8 col-lg-8">
+								<label for="">Opservaciones</label>
+								<textarea class="form-control" id="observaciones" rows="1"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-xs-12">
+							    <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
+							    <input type="file" id="adjunto_contrato" accept="application/pdf">
+							    <p class="help-block">Adjuntar imagen del contrato en formato PDF.</p>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<div class="panel-group text-right">
+							<button type="button" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+							<input type="button" id="btn-contrato-canc" class="btn btn-danger" value="Cancelar">
+						</div>
+					</div>
+			</div>
+		</div>
+	</form>
+	
+
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
+
+
+</body>
+</html>
