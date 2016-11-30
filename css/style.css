@@ -1,0 +1,99 @@
+
+.linea{
+	border: 1px solid #C0C0C0;
+}
+
+.total{
+	font-weight: bold;
+}
+
+.imagenes{
+	display: inline-block;
+	text-align: center;
+	padding: 15px;
+}
+
+.img-mh{
+	margin-top: 15px;
+}
+
+.img-cnjsa{
+	width: 50%;
+}
+
+/* Dividir grilla en 5 partes */
+	.col-xs-15,
+	.col-sm-15,
+	.col-md-15,
+	.col-lg-15
+	{
+	  position: relative;
+	  min-height: 1px;
+	  padding-right: 10px;
+	  padding-left: 10px;
+	}
+	.col-xs-15
+	{
+	  width: 20%;
+	  float: left;
+	}
+	@media (min-width: 768px)
+	{
+	  .col-sm-15
+	  {
+	    width: 20%;
+	    float: left;
+	  }
+	}
+	@media (min-width: 992px)
+	{
+	  .col-md-15
+	  {
+	    width: 20%;
+	    float: left;
+	  }
+	}
+	@media (min-width: 1200px)
+	{
+	  .col-lg-15
+	  {
+	    width: 20%;
+	    float: left;
+	  }
+	}
+/* End Dividir grilla en 5 partes */
+
+
+.input-label{
+	border-width: 0;
+}
+
+#fecha-hora{
+	font-size: 12px;
+	color: #708090;
+	position: static;
+	left: -90px;
+	bottom: 0;
+	width: 100%;
+}
+
+.label-invisible{
+	color: #fff;
+}
+
+
+#myModalAddress p{
+	font-size: 13px;
+}
+
+#btn-login{
+	padding: 25px;
+}
+
+#unlogin-pg{
+	min-width: 350px;
+}
+
+.pinta{
+	background-color:rgba(0, 0, 0, 0.2);
+}
